@@ -1,2 +1,2 @@
 #!/bin/bash
-echo 'ls -la > ls_cwd_content' > 0-cwd_content
+echo -e "..\\nfile1\\nfile2\\nfile3\\nls_cwd_content"
