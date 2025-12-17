@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# 8-beheaded_process - Forcibly terminates the 7-highlander process
+
+# pkill -9 sends the SIGKILL signal to the process by name
+pkill -9 -f 7-highlander
