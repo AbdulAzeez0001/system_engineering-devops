@@ -1,12 +1,14 @@
 #!/usr/bin/env bash
-# 7-highlander - A script that refuses to die on SIGTERM
+# 7-highlander - Responding immediately to SIGTERM
 
-# Use trap to catch SIGTERM and print the message
+# Define the trap behavior
 trap "echo 'I am invincible!!!'" SIGTERM
 
-# Infinite loop
 while true
 do
     echo "To infinity and beyond"
-    sleep 2
+    # Run sleep in the background and wait for it
+    # This allows the script to process the trap immediately
+    sleep 2 &
+    wait $!
 done
